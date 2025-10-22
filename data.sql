@@ -104,7 +104,7 @@ INSERT INTO Pod_Belongs_to_Cat (pod_id, category_name) VALUES
 (6, 'scary'),
 (7, 'sci-fi'),
 (8, 'violation'),
-(9, 'darama'),
+(9, 'drama'),
 (10, 'funny');
 
 -- Ep_Hosted_by_Host
