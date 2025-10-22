@@ -141,3 +141,8 @@ INSERT INTO REVIEWS (review_id, review_comment, review_star, ep_id) VALUES
 (8, 'Interesting topic.', 4, 8),
 (9, 'Funny and engaging.', 5, 9),
 (10, 'A bit repetitive.', 3, 10);
+
+SELECT p.pod_name, e.ep_name
+FROM PODCASTS p
+JOIN Pod_has_Ep pe ON p.pod_id = pe.pod_id
+JOIN EPISODES e ON e.ep_id = pe.ep_id;
