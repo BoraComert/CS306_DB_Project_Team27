@@ -2,55 +2,55 @@ USE supodcast_db;
 
 -- PODCASTS
 INSERT INTO PODCASTS (pod_id, pod_name, pod_description) VALUES
-(1, 'Tech Talks', 'Technology insights'),
-(2, 'Mind Matters', 'Psychology discussions'),
-(3, 'Health Vibes', 'Wellness and nutrition'),
-(4, 'History Echoes', 'Historical deep dives'),
-(5, 'CineChat', 'Movie reviews and news'),
-(6, 'Music Waves', 'Musicians and trends'),
-(7, 'Science Sphere', 'Scientific breakthroughs'),
-(8, 'EcoTalk', 'Sustainability and environment'),
-(9, 'Startup Stories', 'Entrepreneurship tales'),
-(10, 'Book Club', 'Book summaries and analysis');
+(1, 'Tedx', 'people talks'),
+(2, 'biology in science', 'biology talks'),
+(3, 'artificial intelligence', 'ai is rising people'),
+(4, 'konuşanlar', 'hasan can polat'),
+(5, 'demon slayer', 'mükemmel anime'),
+(6, 'musicians', 'playing music'),
+(7, 'gamers', 'playing games bro'),
+(8, 'Economy conference', 'stock exchange info '),
+(9, 'inspiring talks', 'people talks about their lives'),
+(10, 'fight club', 'first rule!');
 
 -- CATEGORIES
 INSERT INTO CATEGORIES (category_name, category_description) VALUES
-('Technology', 'All about tech'),
-('Psychology', 'Human mind & behavior'),
-('Health', 'Health and lifestyle'),
-('History', 'Historical events'),
-('Movies', 'Film discussions'),
-('Music', 'All things music'),
-('Science', 'Scientific discoveries'),
-('Environment', 'Climate and ecology'),
-('Business', 'Entrepreneurship and startups'),
-('Literature', 'Books and writing');
+('tech', 'technological films'),
+('pyschology', 'about humans behaviours'),
+('mental_health', 'peoples mental health'),
+('feminism', 'female rights'),
+('horror', 'scary films'),
+('scary', 'horror films'),
+('Sci-fi', 'scientific flms'),
+('violation', 'violational films'),
+('drama', 'there are dramas'),
+('funny', 'makes people laugh (hahaha)');
 
 -- HOSTS
 INSERT INTO HOSTS (host_id, host_name, host_country, host_organization) VALUES
-(1, 'Alice Smith', 'USA', 'Tech Weekly'),
-(2, 'John Doe', 'UK', 'Mind Matters Org'),
-(3, 'Emma Brown', 'Canada', 'Health First'),
-(4, 'Mark Wilson', 'Germany', 'History Podcasting Co'),
-(5, 'Sophia Garcia', 'Spain', 'CineTalk Media'),
-(6, 'Liam Johnson', 'Australia', 'SoundWave'),
-(7, 'Olivia Davis', 'Sweden', 'Science Daily'),
-(8, 'Ethan Lee', 'Korea', 'EcoPlanet'),
-(9, 'Noah Kim', 'Japan', 'Startup Nation'),
-(10, 'Mia Lopez', 'Brazil', 'BookVerse');
+(1, 'bekir can', 'amerika', 'şirket1'),
+(2, 'Bora cömret', 'ingiltere', 'şirket2'),
+(3, 'Arda karayel', 'kanada', 'şirket4'),
+(4, 'hasan ahmet', 'almanya', 'holding1'),
+(5, 'miray santos', 'almanya', 'holding2'),
+(6, 'muhammed lana', 'türkiye', 'yurtdışışirket2'),
+(7, 'el habibi', 'türkiye', 'şirket'),
+(8, 'johny bravo', 'türkiye', 'limited.as'),
+(9, 'can günahlar', 'türkiye', 'girişimci'),
+(10, 'label c5', 'türkiye', 'şirketler');
 
 -- USERS
 INSERT INTO USERS (user_id, user_name) VALUES
-(1, 'Bora'),
-(2, 'Ayse'),
+(1, 'bora'),
+(2, 'bekir'),
 (3, 'Ali'),
-(4, 'Zeynep'),
-(5, 'Omar'),
-(6, 'Lina'),
-(7, 'Yusuf'),
-(8, 'Derya'),
-(9, 'Can'),
-(10, 'Melis');
+(4, 'muz'),
+(5, 'usernamee'),
+(6, 'nameuser'),
+(7, 'broa'),
+(8, 'bekiro'),
+(9, 'borsa'),
+(10, 'playlistuser');
 
 -- USERPLAYLISTS
 INSERT INTO USERPLAYLISTS (user_playlist_id, user_playlistName, user_id) VALUES
