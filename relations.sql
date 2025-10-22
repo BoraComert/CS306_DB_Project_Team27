@@ -37,7 +37,7 @@ FOREIGN KEY (host_id) REFERENCES HOSTS(host_id)
 CREATE TABLE Ep_Added_to_UserPlaylist (
 ep_id int,
 user_playlist_id INT,
-PRIMARY KEY (user_playlist_id),
+PRIMARY KEY (user_playlist_id, ep_id),
 FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id)
 ON DELETE CASCADE 
 ON UPDATE CASCADE,
