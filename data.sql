@@ -134,16 +134,16 @@ INSERT INTO Ep_Added_to_UserPlaylist (user_playlist_id, ep_id) VALUES
 (10, 10);
 
 INSERT INTO REVIEWS (review_id, review_comment, review_star, ep_id) VALUES
-(1, 'Excellent episode!', 5, 1),
-(2, 'Loved the insights.', 4, 2),
-(3, 'Informative talk.', 5, 3),
-(4, 'Could be shorter.', 3, 4),
-(5, 'Very relaxing.', 5, 5),
-(6, 'Too long.', 3, 6),
-(7, 'Great storytelling!', 5, 7),
-(8, 'Interesting topic.', 4, 8),
-(9, 'Funny and engaging.', 5, 9),
-(10, 'A bit repetitive.', 3, 10);
+(1, 'great bro', 0, 1),
+(2, 'niiceee', 2, 2),
+(3, 'bad.', 5, 3),
+(4, 'great.', 1, 2),
+(5, 'relaxed', 1, 1),
+(6, 'boring', 1, 2),
+(7, 'I slept', 2, 2),
+(8, 'Interesting', 0, 8),
+(9, 'Funny epiosde.', 1, 9),
+(10, 'stop please', 0, 10);
 
 SELECT p.pod_name, e.ep_name
 FROM PODCASTS p
