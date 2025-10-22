@@ -77,3 +77,8 @@ INSERT INTO EPISODES (ep_id, ep_name, ep_duration, pod_id) VALUES
 (8, 'Ancient Civilizations', 48, 4),
 (9, 'Oscar Predictions', 42, 5),
 (10, 'Indie Films Review', 47, 5);
+
+SELECT p.pod_name, e.ep_name
+FROM PODCASTS p
+JOIN Pod_has_Ep pe ON p.pod_id = pe.pod_id
+JOIN EPISODES e ON e.ep_id = pe.ep_id;
