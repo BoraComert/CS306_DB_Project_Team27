@@ -26,6 +26,7 @@ PRIMARY KEY (ep_id)
 );
 CREATE TABLE REVIEWS (
 review_comment VARCHAR(200),
+PRIMARY KEY (review_id),
 review_id int ,
 review_star int
 );
