@@ -10,6 +10,7 @@ FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id)
 
 );
 
+
 CREATE TABLE Pod_Belongs_to_Cat (
 
 pod_name VARCHAR(100),
@@ -17,6 +18,7 @@ category_name VARCHAR(100),
 PRIMARY KEY (pod_name,category_name),
 FOREIGN KEY (pod_name) REFERENCES PODCASTS(pod_name),
 FOREIGN KEY (category_name) REFERENCES CATEGORIES(category_name)
+
 
 );
 
@@ -34,8 +36,7 @@ ep_id int,
 playlist_name VARCHAR(100),
 user_id int,
 PRIMARY KEY (ep_id,playlist_name),
-FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
-
+FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id)
 
 );
 
@@ -46,3 +47,5 @@ PRIMARY KEY (ep_id,review_id),
 FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
 FOREIGN KEY (review_id) REFERENCES REVIEWS(review_id)
 );
+
+
