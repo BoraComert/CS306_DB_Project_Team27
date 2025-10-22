@@ -31,21 +31,23 @@ PRIMARY KEY (review_id),
 review_id int ,
 review_star int
 );
+
 CREATE TABLE HOSTS (
+host_id INT,
 host_name VARCHAR(50),
-PRIMARY KEY (host_name),
+PRIMARY KEY (host_id),
 host_country VARCHAR(50),
 host_organization VARCHAR(100)
 );
 
 CREATE TABLE USERS(
-user_id VARCHAR(100),
-user_name VARCHAR(100),
+user_id INT,
+user_name VARCHAR(200),
 PRIMARY KEY(user_id)
 );
 
 CREATE TABLE USERPLAYLISTS(
-user_id varchar(100),
+user_id INT,
 
 user_playlistName VARCHAR(100) NOT NULL,
 user_playlist_id INT,
