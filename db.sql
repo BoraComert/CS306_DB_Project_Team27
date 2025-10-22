@@ -29,7 +29,10 @@ CREATE TABLE REVIEWS (
 review_comment VARCHAR(200),
 PRIMARY KEY (review_id),
 review_id int ,
-review_star int
+review_star int,
+ep_id INT,
+FOREIGN KEY (ep_id) references episodes(ep_id)
+ON DELETE CASCADE
 );
 
 CREATE TABLE HOSTS (
