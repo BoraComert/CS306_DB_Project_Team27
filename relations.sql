@@ -18,6 +18,13 @@ PRIMARY KEY (pod_name,category_name),
 FOREIGN KEY (pod_name) REFERENCES PODCASTS(pod_name),
 FOREIGN KEY (category_name) REFERENCES CATEGORIES(category_name)
 
+);
 
-
+CREATE TABLE Ep_Hosted_by_Host (
+ep_id int,
+host_name VARCHAR(50),
+PRIMARY KEY (ep_id,host_name),
+FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
+FOREIGN KEY (host_name) REFERENCES HOSTS(host_name)
+host_name NOT NULL
 );
