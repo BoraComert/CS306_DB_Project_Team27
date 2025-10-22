@@ -1,26 +1,13 @@
 USE  supodcast_db;
 
-DROP TABLE Pod_has_Ep;
-DROP TABLE Pod_Belongs_to_Cat;
-DROP TABLE Ep_Hosted_by_Host;
-DROP TABLE Ep_Added_to_UserPlaylist;
-DROP TABLE Ep_Has_Review;
-
-
-
-DROP TABLE PODCASTS;
-DROP TABLE CATEGORIES;
-DROP TABLE EPISODES;
-DROP TABLE REVIEWS;
-DROP TABLE HOSTS;
-DROP TABLE USERPLAYLISTS;
 
 
 CREATE TABLE Pod_has_Ep (
 pod_name VARCHAR(100),
+pod_id INT,
 ep_id int,
-PRIMARY KEY (pod_name,ep_id),
-FOREIGN KEY (pod_name) REFERENCES PODCASTS(pod_name),
+PRIMARY KEY (pod_id,ep_id),
+FOREIGN KEY (pod_id) REFERENCES PODCASTS(pod_id),
 FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id)
 
 );
