@@ -1,5 +1,20 @@
-
 USE  supodcast_db;
+
+DROP TABLE Pod_has_Ep;
+DROP TABLE Pod_Belongs_to_Cat;
+DROP TABLE Ep_Hosted_by_Host;
+DROP TABLE Ep_Added_to_UserPlaylist;
+DROP TABLE Ep_Has_Review;
+
+
+
+DROP TABLE PODCASTS;
+DROP TABLE CATEGORIES;
+DROP TABLE EPISODES;
+DROP TABLE REVIEWS;
+DROP TABLE HOSTS;
+DROP TABLE USERPLAYLISTS;
+
 
 CREATE TABLE Pod_has_Ep (
 pod_name VARCHAR(100),
@@ -33,19 +48,27 @@ FOREIGN KEY (host_name) REFERENCES HOSTS(host_name)
 
 CREATE TABLE Ep_Added_to_UserPlaylist (
 ep_id int,
-playlist_name VARCHAR(100),
+user_playlistName VARCHAR(100),
 user_id int,
-PRIMARY KEY (ep_id,playlist_name),
+PRIMARY KEY (ep_id,user_id),
 FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id)
-
+ON DELETE CASCADE 
+ON UPDATE CASCADE,
+FOREIGN KEY (user_id) REFERENCES USERPLAYLISTS(user_id)
+ON DELETE NO ACTION
+ON UPDATE CASCADE
 );
 
 CREATE TABLE Ep_Has_Review (
 ep_id int,
 review_id int,
 PRIMARY KEY (ep_id,review_id),
-FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
+FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id)
+ON DELETE CASCADE 
+ON UPDATE CASCADE,
 FOREIGN KEY (review_id) REFERENCES REVIEWS(review_id)
+ON DELETE NO ACTION
+ON UPDATE CASCADE
 );
 
 
