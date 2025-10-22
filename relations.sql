@@ -28,3 +28,21 @@ FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
 FOREIGN KEY (host_name) REFERENCES HOSTS(host_name)
 host_name NOT NULL
 );
+
+CREATE TABLE Ep_Added_to_UserPlaylist (
+ep_id int,
+playlist_name VARCHAR(100),
+user_id int,
+PRIMARY KEY (ep_id,playlist_name),
+FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
+
+
+);
+
+CREATE TABLE Ep_Has_Review (
+ep_id int,
+review_id int,
+PRIMARY KEY (ep_id,review_id),
+FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
+FOREIGN KEY (review_id) REFERENCES REVIEWS(review_id)
+);
