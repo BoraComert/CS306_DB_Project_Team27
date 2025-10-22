@@ -7,7 +7,8 @@ USE supodcast_db;
 
 CREATE TABLE PODCASTS(
 pod_name VARCHAR(100),
-PRIMARY KEY (pod_name),
+pod_id INT,
+PRIMARY KEY (pod_id),
 pod_description VARCHAR(100)
 );
 
@@ -37,10 +38,17 @@ host_country VARCHAR(50),
 host_organization VARCHAR(100)
 );
 
-CREATE TABLE USERPLAYLISTS(
-user_id int,
-PRIMARY KEY (user_id),
-user_name VARCHAR(50),
-user_playlistName VARCHAR(100)
+CREATE TABLE USERS(
+user_id VARCHAR(100),
+user_name VARCHAR(100),
+PRIMARY KEY(user_id)
 );
 
+CREATE TABLE USERPLAYLISTS(
+user_id varchar(100),
+
+user_playlistName VARCHAR(100) NOT NULL,
+user_playlist_id INT,
+PRIMARY KEY(user_playlist_id),
+FOREIGN KEY(user_id) references users(user_id)
+);
