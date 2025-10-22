@@ -5,7 +5,6 @@ CREATE DATABASE supodcast_db;
 USE supodcast_db;
 
 
-
 CREATE TABLE PODCASTS(
 pod_name VARCHAR(100),
 PRIMARY KEY (pod_name),
