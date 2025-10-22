@@ -78,7 +78,66 @@ INSERT INTO EPISODES (ep_id, ep_name, ep_duration, pod_id) VALUES
 (9, 'Oscar Predictions', 42, 5),
 (10, 'Indie Films Review', 47, 5);
 
-SELECT p.pod_name, e.ep_name
-FROM PODCASTS p
-JOIN Pod_has_Ep pe ON p.pod_id = pe.pod_id
-JOIN EPISODES e ON e.ep_id = pe.ep_id;
+-- Pod_has_Ep
+INSERT INTO Pod_has_Ep (pod_id, pod_name, ep_id) VALUES
+(1, 'Tech Talks', 1),
+(1, 'Tech Talks', 2),
+(2, 'Mind Matters', 3),
+(2, 'Mind Matters', 4),
+(3, 'Health Vibes', 5),
+(3, 'Health Vibes', 6),
+(4, 'History Echoes', 7),
+(4, 'History Echoes', 8),
+(5, 'CineChat', 9),
+(5, 'CineChat', 10);
+
+-- Pod_Belongs_to_Cat
+INSERT INTO Pod_Belongs_to_Cat (pod_id, category_name) VALUES
+(1, 'Technology'),
+(2, 'Psychology'),
+(3, 'Health'),
+(4, 'History'),
+(5, 'Movies'),
+(6, 'Music'),
+(7, 'Science'),
+(8, 'Environment'),
+(9, 'Business'),
+(10, 'Literature');
+
+-- Ep_Hosted_by_Host
+INSERT INTO Ep_Hosted_by_Host (ep_id, host_id) VALUES
+(1, 1),
+(2, 1),
+(3, 2),
+(4, 2),
+(5, 3),
+(6, 3),
+(7, 4),
+(8, 4),
+(9, 5),
+(10, 5);
+
+-- Ep_Added_to_UserPlaylist
+INSERT INTO Ep_Added_to_UserPlaylist (user_playlist_id, ep_id) VALUES
+(1, 1),
+(2, 3),
+(3, 5),
+(4, 7),
+(5, 9),
+(6, 2),
+(7, 4),
+(8, 6),
+(9, 8),
+(10, 10);
+
+INSERT INTO REVIEWS (review_id, review_comment, review_star, ep_id) VALUES
+(1, 'Excellent episode!', 5, 1),
+(2, 'Loved the insights.', 4, 2),
+(3, 'Informative talk.', 5, 3),
+(4, 'Could be shorter.', 3, 4),
+(5, 'Very relaxing.', 5, 5),
+(6, 'Too long.', 3, 6),
+(7, 'Great storytelling!', 5, 7),
+(8, 'Interesting topic.', 4, 8),
+(9, 'Funny and engaging.', 5, 9),
+(10, 'A bit repetitive.', 3, 10);
