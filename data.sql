@@ -54,55 +54,58 @@ INSERT INTO USERS (user_id, user_name) VALUES
 
 -- USERPLAYLISTS
 INSERT INTO USERPLAYLISTS (user_playlist_id, user_playlistName, user_id) VALUES
-(1, 'Morning Motivation', 1),
-(2, 'Evening Relax', 2),
-(3, 'Focus Time', 3),
-(4, 'Study Mix', 4),
-(5, 'Travel Talks', 5),
-(6, 'Workout Energy', 6),
-(7, 'Weekend Chill', 7),
-(8, 'Daily News', 8),
-(9, 'Bedtime Vibes', 9),
-(10, 'Pod Highlights', 10);
+(1, 'gym playlist', 1),
+(2, 'rock playlist', 2),
+(3, 'mix play', 3),
+(4, 'playlist', 4),
+(5, 'list', 5),
+(6, 'listening playlist', 6),
+(7, 'playlist46', 7),
+(8, 'playlingo', 8),
+(9, 'listo', 9),
+(10, 'moooddd', 10);
 
 -- EPISODES
 INSERT INTO EPISODES (ep_id, ep_name, ep_duration, pod_id) VALUES
-(1, 'AI in 2025', 45, 1),
-(2, 'Quantum Computers', 40, 1),
-(3, 'Cognitive Biases', 35, 2),
-(4, 'Mental Health Tips', 50, 2),
-(5, 'Yoga for Beginners', 30, 3),
-(6, 'Nutrition Myths', 55, 3),
-(7, 'World War II Insights', 60, 4),
-(8, 'Ancient Civilizations', 48, 4),
-(9, 'Oscar Predictions', 42, 5),
-(10, 'Indie Films Review', 47, 5);
+(1, 'ai', 45, 1),
+(2, 'computer', 40, 1),
+(3, 'bias', 35, 2),
+(4, 'health informations', 50, 2),
+(5, 'ep name', 30, 3),
+(6, 'episode nema', 55, 3),
+(7, 'fights of wolrd', 60, 4),
+(8, 'mathematics', 48, 4),
+(9, 'films', 42, 5),
+(10, 'bora', 47, 5);
 
 -- Pod_has_Ep
 INSERT INTO Pod_has_Ep (pod_id, pod_name, ep_id) VALUES
-(1, 'Tech Talks', 1),
-(1, 'Tech Talks', 2),
-(2, 'Mind Matters', 3),
-(2, 'Mind Matters', 4),
-(3, 'Health Vibes', 5),
-(3, 'Health Vibes', 6),
-(4, 'History Echoes', 7),
-(4, 'History Echoes', 8),
-(5, 'CineChat', 9),
-(5, 'CineChat', 10);
+(1, 'tech', 1),
+(1, 'tech', 2),
+(2, 'psycho', 3),
+(2, 'pyscho', 4),
+(3, 'mood', 5),
+(3, 'mood', 6),
+(4, 'bad_things', 7),
+(4, 'bad_things', 8),
+(5, 'chatting', 9),
+(5, 'chatting', 10);
+
+
+
 
 -- Pod_Belongs_to_Cat
 INSERT INTO Pod_Belongs_to_Cat (pod_id, category_name) VALUES
-(1, 'Technology'),
-(2, 'Psychology'),
-(3, 'Health'),
-(4, 'History'),
-(5, 'Movies'),
-(6, 'Music'),
-(7, 'Science'),
-(8, 'Environment'),
-(9, 'Business'),
-(10, 'Literature');
+(1, 'tech'),
+(2, 'pyschology'),
+(3, 'mental_health'),
+(4, 'feminism'),
+(5, 'horror'),
+(6, 'scary'),
+(7, 'sci-fi'),
+(8, 'violation'),
+(9, 'darama'),
+(10, 'funny');
 
 -- Ep_Hosted_by_Host
 INSERT INTO Ep_Hosted_by_Host (ep_id, host_id) VALUES
