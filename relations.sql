@@ -26,7 +26,7 @@ host_name VARCHAR(50),
 PRIMARY KEY (ep_id,host_name),
 FOREIGN KEY (ep_id) REFERENCES EPISODES(ep_id),
 FOREIGN KEY (host_name) REFERENCES HOSTS(host_name)
-host_name NOT NULL
+
 );
 
 CREATE TABLE Ep_Added_to_UserPlaylist (
