@@ -99,20 +99,6 @@ CREATE TABLE Ep_Added_to_UserPlaylist (
         ON UPDATE CASCADE
 );
 
--- =====================================================
--- OPTIONAL TRIGGER: AUTO-INCREMENT PODCAST EPISODE COUNT
--- =====================================================
-
-DELIMITER $$
-CREATE TRIGGER update_podcast_episode_count
-AFTER INSERT ON EPISODES
-FOR EACH ROW
-BEGIN
-    UPDATE PODCASTS
-    SET pod_episodeNum = pod_episodeNum + 1
-    WHERE pod_id = NEW.pod_id;
-END$$
-DELIMITER ;
 
 -- =====================================================
 -- TEST DATA (OPTIONAL)
