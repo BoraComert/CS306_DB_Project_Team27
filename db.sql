@@ -23,10 +23,10 @@ ep_duration INT,
 ep_name VARCHAR(100),
 ep_id INT,
 pod_id INT,
-PRIMARY KEY (ep_id)
+PRIMARY KEY (ep_id),
 FOREIGN KEY (pod_id) references podcasts(pod_id)
 ON DELETE CASCADE
-ON UPDATE CASCADE;
+ON UPDATE CASCADE
 
 );
 CREATE TABLE REVIEWS (
